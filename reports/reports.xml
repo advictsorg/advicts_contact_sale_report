@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+    <record id="contact_sale_report_action" model="ir.actions.report">
+        <field name="name">Contact Sales Report</field>
+        <field name="model">contact.sale.report</field>
+        <field name="binding_model_id" ref="model_contact_sale_report"/>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">advicts_contact_sale_report.contact_sale_template</field>
+        <field name="report_file">advicts_contact_sale_report.contact_sale_template</field>
+        <field name="binding_type">report</field>
+    </record>
+
+    <record id="contact_sale_report_action_xlsx" model="ir.actions.report">
+        <field name="name">Contact Sales Report</field>
+        <field name="model">contact.sale.report</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">advicts_contact_sale_report.contact_sale_xlsx</field>
+        <field name="report_file">advicts_contact_sale_report.contact_sale_xlsx</field>
+    </record>
+
+</odoo>

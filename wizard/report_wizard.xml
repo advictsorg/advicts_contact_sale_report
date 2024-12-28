@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="contact_sale_report_view_wizard_form" model="ir.ui.view">
+        <field name="name">contact.sale.report.form</field>
+        <field name="model">contact.sale.report</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="partner_id" widget="many2one_avatar" options="{'create': false, 'create_edit': false}"/>
+                    <field name="start_date"/>
+                    <field name="end_date"/>
+                </group>
+                <footer>
+                    <button id="button_print" type="object" name="action_print_pdf_report" string="Print PDF"
+                            class='btn-primary'/>
+                    <button id="button_print" type="object" name="action_print_xlsx_report"
+                            string="Print XLSX" class='btn-primary'/>
+                    <button string="Cancel" class="btn btn-secondary" special="cancel" data-hotkey="z"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="contact_sale_report_wizard_action" model="ir.actions.act_window">
+        <field name="name">Contact Sales Report</field>
+        <field name="res_model">contact.sale.report</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="contact_sale_report_view_wizard_form"/>
+        <field name="target">new</field>
+    </record>
+</odoo>

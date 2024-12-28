@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="advicts_contact_sale_report.reporting_menu" name="Reports"
+              parent="contacts.menu_contacts" sequence="200"/>
+    <menuitem id="advicts_contact_sale_report.contact_sale_menuitem" name="Contact Sales Report"
+              action="advicts_contact_sale_report.contact_sale_report_wizard_action"
+              parent="advicts_contact_sale_report.reporting_menu" sequence="210"/>
+</odoo>
